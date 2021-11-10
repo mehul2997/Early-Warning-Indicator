@@ -482,7 +482,7 @@ def main():
                 #st.write(clean_df1.shape)
 
                 scaled_df = clean_df1
-                st.write(scaled_df)
+                #st.write(scaled_df)
                 scaled_df.drop('Id', axis = 1)
                 nbrs = NearestNeighbors(n_neighbors=11, algorithm='auto', metric='cosine').fit(scaled_df)
                 distances, indices = nbrs.kneighbors(scaled_df)
